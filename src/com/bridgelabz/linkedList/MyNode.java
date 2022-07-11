@@ -1,6 +1,6 @@
 package com.bridgelabz.linkedList;
 
-public class MyNode<K extends Comparable> implements INode<K>{
+public class MyNode<K extends Comparable> implements INode<K> {
     private K key;
     private INode next;
 
