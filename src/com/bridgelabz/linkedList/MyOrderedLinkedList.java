@@ -1,7 +1,9 @@
 package com.bridgelabz.linkedList;
 
 public class MyOrderedLinkedList {
+
     public   INode head;
+
     public   INode tail;
     static int counter =1;
     INode temp ;
@@ -99,7 +101,7 @@ public class MyOrderedLinkedList {
             System.out.println("Linked list Not Empty");
         }
     }
-    public void insert(INode myNode ,INode newNode){
+    public void insert(INode<Comparable> myNode , INode<Comparable> newNode){
         INode tempNode = myNode.getNext();
         myNode.setNext(newNode);
         newNode.setNext(tempNode);
@@ -124,7 +126,7 @@ public class MyOrderedLinkedList {
         }
         System.out.println("Size of current Linked List is: "+counter);
     }
-    public void search(INode myNode) {
+    public void search(INode<Comparable> myNode) {
         INode tempNode = this.head;
         while(tempNode != null ) {
             if (myNode.getKey() == tempNode.getKey()) {
@@ -134,7 +136,7 @@ public class MyOrderedLinkedList {
             tempNode=tempNode.getNext();
         }
     }
-    public void insertUsingKey(INode myNode,INode value){
+    public void insertUsingKey(INode<Comparable> myNode, INode<Comparable> value){
         INode tempNode = this.head;
         while(tempNode != null ) {
             if (myNode.getKey() == tempNode.getKey()) {
@@ -147,7 +149,7 @@ public class MyOrderedLinkedList {
             tempNode=tempNode.getNext();
         }
     }
-    public void remove(INode myNode ){
+    public void remove(INode<Comparable> myNode ){
         INode tempNode = this.head;
         while(tempNode != null ) {
             if (myNode.getKey() == tempNode.getKey()) {
